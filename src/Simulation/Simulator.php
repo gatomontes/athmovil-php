@@ -271,7 +271,7 @@ final class Simulator implements Transport
             'subTotal' => $this->number($request['subtotal'] ?? '0.00'), 'tax' => $this->number($request['tax'] ?? '0.00'),
             'total' => $this->number($request['total']), 'fee' => 0.0,
             'netAmount' => $payment['status'] === 'COMPLETED' ? $this->number($request['total']) : 0.0,
-            'totalRefundedAmount' => $payment['refundedCents'] / 100,
+            'totalRefundedAmount' => (float) ($payment['refundedCents'] / 100),
             'metadata1' => $request['metadata1'], 'metadata2' => $request['metadata2'], 'items' => $items, 'isNonProfit' => false];
     }
 

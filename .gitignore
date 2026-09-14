@@ -11,3 +11,4 @@ composer.phar
 /.env
 /.phpunit.cache/
 /var/
+__pycache__/

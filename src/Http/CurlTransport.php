@@ -62,7 +62,7 @@ final readonly class CurlTransport implements Transport
             }
             return new Response((int) curl_getinfo($handle, CURLINFO_RESPONSE_CODE), $responseBody);
         } finally {
-            curl_close($handle);
+            unset($handle);
         }
     }
 }

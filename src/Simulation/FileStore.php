@@ -27,7 +27,7 @@ final readonly class FileStore implements Store
                 $bytes = @file_get_contents($base . '.json');
                 if ($bytes === false) { throw new \RuntimeException('Cannot read simulator storage.'); }
                 try { $state = json_decode($bytes, true, 512, JSON_THROW_ON_ERROR); }
-                catch (\JsonException) { throw new \RuntimeException('Simulator storage is corrupt; restore or explicitly reset it.'); }
+                catch (\JsonException) { throw new \RuntimeException('Simulator storage is corrupt; restore or remove the affected local state file.'); }
                 if (!is_array($state)) { throw new \RuntimeException('Simulator storage must contain an object.'); }
             }
             $result = $callback($state);
