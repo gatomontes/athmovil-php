@@ -27,6 +27,8 @@ composer test
 php examples/simulation.php
 ```
 
+The 38-test suite, example, and loopback HTTPS smoke test pass on PHP 8.2–8.5; see [the recorded validation run](docs/validation.md). To run the optional transport smoke test locally, use `python3 tests/transport-smoke.py` after `composer install`; it also requires Python 3 and OpenSSL.
+
 ## Complete a simulated checkout
 
 ```php
