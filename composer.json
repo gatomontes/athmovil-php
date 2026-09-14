@@ -1,0 +1,10 @@
+{
+    "name": "gatomontes/athmovil-php",
+    "description": "Unofficial PHP client for the ATH Movil ecommerce Payment Button API",
+    "type": "library",
+    "license": "proprietary",
+    "require": {"php": "^8.2", "ext-json": "*"},
+    "suggest": {"ext-curl": "Required for the included CurlTransport"},
+    "autoload": {"psr-4": {"AthMovil\\": "src/"}},
+    "scripts": {"test": "@php tests/run.php"}
+}
