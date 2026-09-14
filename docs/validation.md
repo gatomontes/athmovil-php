@@ -18,6 +18,10 @@ The authoring container has no PHP/Composer; execution evidence comes from GitHu
 
 The suite covers endpoint requests, decimal precision, validation, metadata, typed responses, request-derived simulation, fictional refund customers, transition rules, partial refunds, timeout before/after effects, capture redaction, business isolation, persistence, rollback/corruption handling, competing refunds, repeatable fixtures, reset, and bounded polling.
 
-Before a stable release, perform explicitly authorized live acceptance for create/find/customer confirmation/authorize, merchant and customer cancellation, expiration, phone update, refund, and merchant/order/receipt reconciliation. Resolve the documented upstream ambiguities and select a license. Simulation demonstrates application flow, not provider acceptance.
+Before a stable release, perform explicitly authorized live acceptance for create/find/customer confirmation/authorize, merchant and customer cancellation, expiration, phone update, refund, and merchant/order/receipt reconciliation. Resolve the documented upstream ambiguities. Simulation demonstrates application flow, not provider acceptance.
 
 No real ATH Móvil API requests, charges, refunds, or Packagist registration are part of package development.
+
+## Alpha preview scope
+
+`v0.1.0-alpha.1` uses the MIT license and is intended for development/evaluation. The release job depends on the full PHP 8.2–8.5 test matrix, including both HTTPS and checkout HTTP smoke tests. The owner also reported that tests and the browser demo worked on their local Windows setup. This user-reported check is separate from CI evidence. No live credentials were available; real payments and refunds remain unverified.

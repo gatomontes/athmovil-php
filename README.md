@@ -2,7 +2,7 @@
 
 A framework-independent Composer wrapper for ATH Móvil ecommerce payments, with a local simulator for complete checkout development.
 
-**Unofficial development version.** Not endorsed by Evertec. The simulator is local software, not an ATH Móvil testing environment. No live payment compatibility has been claimed. See [validation](docs/validation.md) and [upstream contract notes](docs/api-contract.md).
+**v0.1.0-alpha.1 · Development preview · MIT licensed.** Not endorsed by Evertec. Simulation and automated checks pass; **live ATH Móvil payment/refund integration is unverified** because live credentials were unavailable. Intended for development and evaluation, not production payment acceptance. The simulator is local software, not an ATH Móvil testing environment. See [validation](docs/validation.md) and [upstream contract notes](docs/api-contract.md).
 
 ## Install from GitHub
 
@@ -13,7 +13,7 @@ Until a release is registered on Packagist, add the repository to your applicati
 ```json
 {
   "repositories": [{"type": "vcs", "url": "https://github.com/gatomontes/athmovil-php"}],
-  "require": {"gatomontes/athmovil-php": "dev-main"}
+  "require": {"gatomontes/athmovil-php": "0.1.0-alpha.1"}
 }
 ```
 
@@ -173,4 +173,4 @@ Custom `Http\Transport` implementations must preserve TLS verification and singl
 
 Register `Client` in Symfony or Laravel's service container and inject configuration. The core requires no framework. Dedicated adapters, checkout UI, webhooks, reporting, and B2C disbursements are outside this version.
 
-The repository is a development package, not a tagged stable release. Licensing remains undecided; Composer is marked `proprietary` until the owner chooses a license. No Packagist registration or distribution license grant is implied.
+Released under the [MIT license](LICENSE). `v0.1.0-alpha.1` is an alpha preview; the public API and simulator behavior may change before a stable release. See the [changelog](CHANGELOG.md) and [release notes](docs/releases/v0.1.0-alpha.1.md). Packagist submission is a separate step; the GitHub VCS installation above works without it.
