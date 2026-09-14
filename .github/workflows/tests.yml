@@ -22,3 +22,4 @@ jobs:
       - run: composer test
       - run: php examples/simulation.php
       - run: python3 tests/transport-smoke.py
+      - run: python3 tests/checkout-smoke.py

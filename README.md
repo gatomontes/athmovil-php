@@ -31,6 +31,8 @@ The 38-test suite, example, and loopback HTTPS smoke test pass on PHP 8.2–8.5;
 
 ## Complete a simulated checkout
 
+Prefer a browser? Run `php -S 127.0.0.1:8080 -t examples/checkout/public` after `composer install`, then open [the local checkout](http://127.0.0.1:8080). The [checkout demo guide](examples/checkout/README.md) covers editable items/metadata, customer confirmation, receipts, refunds, persistent state, and captured responses. It is simulation-only and starts only when explicitly run.
+
 ```php
 <?php
 declare(strict_types=1);
